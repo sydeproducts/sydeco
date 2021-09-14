@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="icon" href="assets/images/icon browser.png">
 
     <title>IT-SECURITY</title>
     
@@ -22,6 +23,20 @@
     <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+	  
+	  
+	  <style>
+	
+	.unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+		
+		
+	  </style>
 <!--
     
 TemplateMo 557 Grad School
@@ -31,8 +46,46 @@ https://templatemo.com/tm-557-grad-school
 -->
   </head>
 
-<body>
+<body div class="unselectable">
 
+	<script language=JavaScript>
+
+
+//Disable right mouse click Script
+//By Geek Site.in
+
+
+var message="Disabled Right Click!";
+
+///////////////////////////////////
+function clickIE4(){
+if (event.button==2){
+alert(message);
+return false;
+}
+}
+
+function clickNS4(e){
+if (document.layers||document.getElementById&&!document.all){
+if (e.which==2||e.which==3){
+alert(message);
+return false;
+}
+}
+}
+
+if (document.layers){
+document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=clickNS4;
+}
+else if (document.all&&!document.getElementById){
+document.onmousedown=clickIE4;
+}
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+// --> 
+</script>s
    
   <!--header-->
  		
@@ -231,7 +284,13 @@ https://templatemo.com/tm-557-grad-school
 					<br>
 					<br>
 			<font color="#FF9E00"><h3>Update Of SP-One Attack</h3></font>
-			<font color="#FF9E00"><h3>At This Day 14 September 2021</h3></font>
+			<font color="#FF9E00"><h3>At This Day<h3 id="p1"></h3></h3></font>
+					
+					<script>
+						var today = new Date();
+						var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+						document.getElementById("p1").innerHTML = date;
+					</script>
 				</div>
 				
 	<div class="demo">
