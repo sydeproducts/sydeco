@@ -697,6 +697,16 @@ section.why-us {
     text-transform: capitalize;
 	text-align: center;
 }
+.title3{
+	animation: blinkingText 1.2s infinite;	
+}
+@keyframes blinkingText{
+	0% { color: #D87F00;}
+	49% { color: #FF0004;}
+	60% { color: transparent;}
+	99% {color: transparent;}
+	100% { color: #F8D800;}
+}
 
 .serviceBox .description{
     font-size: 15px;
