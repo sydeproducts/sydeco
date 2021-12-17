@@ -29,6 +29,65 @@
 	  
 	  
 <style type="text/css">
+
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 100%;
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 110;
+}
+.cnt223{
+min-width: 600px;
+width: 600px;
+min-height: 150px;
+margin: 200px 420px;
+position: relative;
+z-index: 103;
+padding: 35px 35px;
+border-radius: 5px;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #ffffff;
+font-weight: bold;
+margin: 20px 250px;
+text-align: left;
+}
+.cnt223 .x{
+float: right;
+height: 350px;
+left: 22px;
+position: relative;
+top: 25px;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
 		  
  .unselectable {
         -webkit-user-select: none;
@@ -43,6 +102,66 @@
   </head>
 
 <body div class="unselectable">
+
+<script type='text/javascript'>
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup').show();
+$('.close').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+ 
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+
+
+</script>
+<div class='popup'>
+<div class='cnt223'>
+<p>
+<script>
+jQuery('#pum-123')
+    .on('pumBeforeOpen', function () {
+        var $video = jQuery('video', jQuery(this));
+        $video[0].play();
+    });
+	</script>
+	<video id="myvideo" src="assets/images/videopopup.mp4" autoplay loop controls muted width="720"></video>
+	<script>
+		function toggleMute()
+		{
+			var video = document.getElementById("myvideo");
+			if (video.autoplay)
+			{
+				video.autoplay = true;
+			}
+			else
+			{
+				debugger;
+				video.autoplay=true;
+				video.play()
+			}
+		}
+		$(document).ready(function()
+		{
+			setTimeout(toggleMute, 300000);
+			}
+		)
+	</script>
+	</p>
+<a href='' class='close'>Close</a>
+</div>
+</div>
 
 	<script language=JavaScript>
 
