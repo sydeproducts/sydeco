@@ -30,49 +30,7 @@
 	  
 <style type="text/css">
 
-#mask {
-  position:fixed;
-  left:0;
-  top:0;
-  z-index:9000;
-  background-color:#26262c;
-  display:none;
-}  
-#boxes .window {
-  position: fixed;
-  left:0;
-  top:0;
-  width:440px;
-  height:auto;
-  display:none;
-  z-index:9999;
-  padding:20px;
-  border-radius: 5px;
-  text-align: center;
-}
-#boxes #dialog {
-  width:680px; 
-  height:450px;
-  padding: 10px 10px 10px 10px;
-  background-color:#000000;
-}
-
-.agree:hover{
-  background-color: #D1D1D1;
-}
-.popupoption:hover{
- background-color:#D1D1D1;
- color: green;
-}
-.popupoption2:hover{
- color: red;
-}
-
-.maintext {
-background-color: #FFFFFF;
-
-}
-		  
+	  
  .unselectable {
         -webkit-user-select: none;
         -webkit-touch-callout: none;
@@ -87,47 +45,7 @@ background-color: #FFFFFF;
 
 <body div class="unselectable">
 
-<div class="maintext">
-		</div>
-			<div id="boxes">
-			<div style="top: 50%; display: none;" id="dialog" class="window"> 
-				<div id="san">
-					<a href="#" class="close agree">
-						<img src="assets/images/xbutton.png" width="25" style="float:right; margin-right: -25px; margin-top: -20px;">
-					</a>
-					<video height="430" width="650" style="position: center;" loop="loop" muted="muted" autoplay="autoplay" controls="controls">
-						<source src="assets/images/videopopup.mp4" type="video/mp4">
-						<source src="assets/images/videopopup.ogg" type="video/ogg">
-					</video>
-					
-				</div>
-			</div>
 
-<script>
-$(document).ready(function() { 
-  var id = '#dialog';
-  var maskHeight = $(document).height();
-  var maskWidth = $(window).width();
-  $('#mask').css({'width':maskWidth,'height':maskHeight}); 
-  $('#mask').fadeIn(500); 
-  $('#mask').fadeTo("slow",0.9); 
-        var winH = $(window).height();
-  var winW = $(window).width();
-        $(id).css('top',  winH/2-$(id).height()/2);
-  $(id).css('left', winW/2-$(id).width()/2);
-     $(id).fadeIn(2000);  
-     $('.window .close').click(function (e) {
-  e.preventDefault();
-  $('#mask').hide();
-  $('.window').hide();
-     });  
-     $('#mask').click(function () {
-  $(this).hide();
-  $('.window').hide();
- });  
- 
-});
-</script>
 
 	<script language=JavaScript>
 
