@@ -25,7 +25,115 @@
     <link rel="stylesheet" href="assets/css/lightbox.css">
 	  
 	  <style>
-	
+		  
+		 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.site-wrapper {
+  background-color: #fff;
+  max-width: 960px;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 70px rgba(255,255,255,0.5);
+}   
+.item-wrapper {
+  background-color: #fff;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  padding: 4px;
+}
+
+.item-wrapper .line {
+  background-color: #6c63ff;
+  position: absolute;
+}
+
+.item-wrapper .line span {
+  background-color: #e3e3e3;
+  position: inherit;
+  display: block;
+  transition: all 0.4s ease-out;
+}
+.item-wrapper .line-top{
+  top: 0;
+  left: 0;
+  width:100%;
+  height:4px;
+}
+.item-wrapper .line-right{
+  top: 0;
+  right: 0;
+  width:4px;
+  height:100%;
+}
+.item-wrapper .line-bottom{
+  right: 0;
+  bottom: 0;
+  width:100%;
+  height:4px;
+}
+.item-wrapper .line-left {
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 100%;
+}
+.item-wrapper .line-top span{
+  top:inherit;
+  left:inherit;
+  width:0;
+  height:100%;
+}
+.item-wrapper .line-right span{
+  top:inherit;
+  right:inherit;
+  width:100%;
+  height:0;
+}
+.item-wrapper .line-bottom span{
+  right:inherit;
+  bottom:inherit;
+  width:0;
+  height:100%;
+}
+.item-wrapper .line-left span {
+  left: inherit;
+  bottom: inherit;
+  width: 100%;
+  height: 0;
+}
+.item-wrapper:hover .line-top span,
+.item-wrapper:hover .line-bottom span{
+  width:100%;
+}
+.item-wrapper:hover .line-left span,
+.item-wrapper:hover .line-right span{
+  height:100%;
+}
+.item-wrapper > .item{
+  padding:40px 30px;
+  text-transform: uppercase;
+  text-align: justify;
+}
+.item-wrapper > .item > h2{
+  font-size: 36px;
+  line-height: 40px;
+}
+.item-wrapper > .item > h2 .title{
+  color:#6c63ff;
+  font-weight: 800;
+}
+.item-wrapper > .item > p{
+  padding:30px 0;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+  
+		  
 	.unselectable {
         -webkit-user-select: none;
         -webkit-touch-callout: none;
@@ -91,19 +199,19 @@ document.oncontextmenu=new Function("alert(message);return false")
   <!--header-->
  	<header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="index.html"><em>Sydeco</em> <img src="assets/images/icon browser  2.png"></a>
+      <a href="../index.html"><em>Sydeco</em> <img src="assets/images/icon browser  2.png"></a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
-        <li><a href="index.html" rel="sponsored" class="external">Home</a></li>
+        <li><a href="../index.html" rel="sponsored" class="external">Home</a></li>
         <li class="has-submenu"><a href="#section2">About</a>
           <ul class="sub-menu">
-            <li><a href="About/About-Greeting/About-Greeting.html" rel="sponsored" class="external">Greeting</a></li>
-            <li><a href="About/About-Company-Profile/About-Company-Profile.html" rel="sponsored" class="external">Company Profile</a></li>
-            <li><a href="About/About-Company-Values/About-Company-Values.html" rel="sponsored" class="external">Company Values</a></li>
-            <li><a href="About/About-Code-of-Conduct/About-Code-of-Conduct.html" rel="sponsored" class="external">Code of Conduct</a></li>
-			<li><a href="tersmofuse.html" rel="sponsored" class="external">Terms of Use</a></li>
+            <li><a href="../About/About-Greeting/About-Greeting.html" rel="sponsored" class="external">Greeting</a></li>
+            <li><a href="../About/About-Company-Profile/About-Company-Profile.html" rel="sponsored" class="external">Company Profile</a></li>
+            <li><a href="../About/About-Company-Values/About-Company-Values.html" rel="sponsored" class="external">Company Values</a></li>
+            <li><a href="../About/About-Code-of-Conduct/About-Code-of-Conduct.html" rel="sponsored" class="external">Code of Conduct</a></li>
+			<li><a href="../TermsofUse.html" rel="sponsored" class="external">Terms of Use</a></li>
           </ul>
         </li>
 		<li class="has-submenu"><a href="#section2">Products</a>
@@ -120,7 +228,7 @@ document.oncontextmenu=new Function("alert(message);return false")
 		  <li class="has-submenu"><a href="#section2">Blog</a>
           <ul class="sub-menu">
             <li><a href="https://sydeconewsblog.blogspot.com/" rel="sponsored" class="external">Blooger</a></li>
-			<li><a href="blog/Hal-01.html" rel="sponsored" class="external">Artikel</a></li>
+			<li><a href="Hal-01.html" rel="sponsored" class="external">Artikel</a></li>
           </ul>
         </li>
         <li><a href="#section6">Contact Us</a></li>
@@ -135,24 +243,74 @@ document.oncontextmenu=new Function("alert(message);return false")
       <div class="row">
         <div class="col-md-6 align-self-center col-lg-12">
           <div class="left-content">
-            <h4>TERMS<em> OF</em> USE</h4>
-			  <h5 align="justify">
-							  <br>
-							  Your access to and use of this site is subject to the following terms and conditions and all applicable laws. By accessing and using this site, you accept the following terms and conditions, without limitation or qualification.<br>
-								Unless otherwise stated, the contents of this site including, but not limited to, the text and images contained herein and their arrangement are the property of PT SYDECO. All trademarks used or referred to in this website are the property of their respective owners.
+		   <div class="site-wrapper">
+     <div class="item-wrapper">
+       <div class="line line-top">
+         <span></span>
+       </div>
+       <div class="line line-right">
+        <span></span>
+      </div>
+      <div class="line line-bottom">
+        <span></span>
+      </div>
+      <div class="line line-left">
+        <span></span>
+      </div>
+      <div class="item">
+		  <font color="#131313">
+        <h2>CYBER SECURITY BEST PRACTICES</h2>
+        <p>The basic principles that should guide those who are called upon to create a computer, information or industrial network, or to secure a pre-existing one, are the ZERO TRUST and the MICRO SEGMENTATION of the network regardless of its size.
+		<br>
+		<br>
+		The ZERO TRUST principle applies not only to the individuals in charge, at whatever level of security, but also and above all in the choice and use of the security equipment that will be used to protect the network.....<br>
+			  </p>
+			  <br>
+			  <a href="artikel.html">Read More</a>
+				  </font>
+				  </div>
+				 </div>
+			   </div>
+			</div>
+			
+			<!--- Content 2 -->
+			<div class="site-wrapper">
+     <div class="item-wrapper">
+       <div class="line line-top">
+         <span></span>
+       </div>
+       <div class="line line-right">
+        <span></span>
+      </div>
+      <div class="line line-bottom">
+        <span></span>
+      </div>
+      <div class="line line-left">
+        <span></span>
+      </div>
+      <div class="item">
+		  <font color="#131313">
+        <h2>ABOUT THE PASSWORD MANAGER</h2>
+        <p>By the end of 2021, 69% of the population would welcome the purchase of a password manager, even though one in five people would already be using it, according to Security.org.
 								<br>
 				  <br>
-							Nothing contained in this site shall be construed as conferring by implication, estoppels, or otherwise, any license or right to any copyright, patent, trademark or other proprietary interest of PT SYDECO or any third party. This site and the content provided in this site, including, but not limited to, graphic images, audio, video, html code, buttons, and text, may not be copied, reproduced, republished, uploaded, posted, transmitted, or distributed in any way, without the prior written consent of PT SYDECO, except that you may download, display, and print one copy of the materials on any single computer solely for your personal, non-commercial use, provided that you do not modify the material in any way and you keep intact all copyright, trademark, and other proprietary notices.<br>
+							If this is true, it's not hard to understand why so many cyber attacks are successful!<br>
 				  <br>
-							The information provided on this site is free of charge and for informational purposes only, and does not create by themselves a business or professional services relationship between you and PT SYDECO. Links on this site may lead to services or sites not operated by PT SYDECO. No judgment or warranty is made with respect to such other services or sites and PT SYDECO takes no responsibility for such other sites or services. A link to another site or service is not an endorsement of that site or service. Any use you make of the information provided on this site, or any site or service linked to by this site, is at your own risk.<br>
-<br>
-							This site and its contents are provided "as is" and PT SYDECO makes no representation or warranty of any kind with respect to this site or any site or service accessible through this site. PT SYDECO expressly disclaims all express and implied warranties including, but not limited to, the implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. In no event will PT SYDECO be liable to any party for any direct, indirect, incidental, special, exemplary, consequential, or other damages (including, but not limited to, lost profits, business interruption, loss of programs or data) without regard to the form of action and whether in contract, tort, negligence, strict liability, or otherwise, arising out of or in connection with this site, any content on or accessed through this site or any site service linked to, or any copying, displaying, or use thereof.<br>
-<br>
-							PT SYDECO maintains this site in INDONESIA and you agree that these terms of use and any legal action or proceeding relating to this site shall take place in INDONESIA and be governed by the laws of INDONESIA, without regard to where in the world you are located, or from where in the world you visited this site. Only Indonesian or French language will be used.<br>
-							You are responsible for complying with the laws of the jurisdiction from which you are accessing this site and you agree that you will not access or use the information on this site in violation of such laws. Unless expressly stated otherwise herein, any information submitted by you through this site shall be deemed non-confidential and non-proprietary. You represent that you have the lawful right to submit such information and agree that you will not submit any information unless you are legally entitled to do so. Because of the open nature of the Internet, we recommend that you not submit information you consider confidential unless you are using SST© (www.sytrasec.com).<br>
-
-			</h5>
-          </div>
+							It is easy to understand the risk of such use when you know what a password manager is and how it works.<br>
+				  <br>
+				  <br>
+							<h4>WHAT IS A PASSWORD MANAGER ?</h4>.....<br>
+			  </p>
+			  <br>
+			  <a href="artikel 02.html">Read More</a>
+				  </font>
+				  </div>
+				 </div>
+			   </div>
+			</div>
+			
+			<!--- Akhir Content -->
+			
         </div>
       </div>
     </div>
