@@ -1,0 +1,52 @@
+body {
+    background-color: #030309 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+#video-background {
+    position: fixed;
+    opacity: 0.4 !important;
+    z-index: -1;
+    object-fit: cover;
+}
+
+section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: linear-gradient(to bottom, #44abd6, #277eb4)
+}
+
+#contact ::placeholder {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+#contact :-ms-input-placeholder {
+    color: white !important;
+}
+
+#contact ::-ms-input-placeholder {
+    color: white !important;
+}
+#navbar {
+    background: rgba(3, 3, 9, 0.5);
+    /* opacity: 0.5; */
+    color: white !important;
+}
+.navbar-brand img:hover {
+    filter: opacity(90%) !important;
+}
+#navbar a {
+    color: white !important;
+    font-weight: bold;
+}
+
+#navbar .dropdown-menu {
+    background-color: #030309;
+}
+#navbar a:hover {
+    color: #f5a425 !important;
+    background-color: transparent !important;
+}
