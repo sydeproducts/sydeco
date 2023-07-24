@@ -381,7 +381,7 @@
                             </form>
                         </div>
 
-                        <div class="p-2 ml-2">
+                        <div class="ps-5">
                             <img
                                 src="../../assets/images/sydeco_WHITE-01.png"
                                 height="auto"
@@ -394,5 +394,17 @@
             </div>
         </div>
         <!-- end of contact form -->
+
+        <div class="footer py-3 d-flex justify-content-center">
+            <footer class="d-flex text-white">
+                <i class="bi bi-c-circle"></i>
+                <div id="year"></div>
+                <div class="ps-2">PT. Sydeco Indonesia.</div>
+            </footer>
+        </div>
     </body>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear;
+    </script>
 </html>

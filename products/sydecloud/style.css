@@ -55,9 +55,9 @@ section {
 #contact ::-ms-input-placeholder {
     color: white !important;
 }
-#navbar {
+
+#navbar, .footer {
     background: rgba(3, 3, 9, 0.5);
-    /* opacity: 0.5; */
     color: white !important;
 }
 .navbar-brand img:hover {
