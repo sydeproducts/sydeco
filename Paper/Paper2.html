@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper</title>
+    <link rel="icon" href="../../assets/images/favicon.png" />
+    <!-- Link CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Menambahkan latar belakang gambar */
+      body {
+        background-image: url("landing.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 235vh;
+        margin: 0;
+      }
+      .title-wrapper {
+        position: absolute;
+        top: 20px;
+        left: 13%; /* Gunakan persentase agar dinamis */
+        background-color: rgba(30, 51, 90, 0.7); /* Lebih transparan */
+        padding: 10px;
+        font-size: 1rem; /* Menggunakan rem agar fleksibel */
+        color: #fff;
+        border-radius: 5px;
+        width: 120%;
+      }
+
+      .title-wrapper h2 {
+        font-size: 1.5rem; /* Ukuran dasar teks */
+        margin: 0;
+      }
+
+      .title-wrapper h5 {
+        font-size: 1rem; /* Ukuran dasar sub-teks */
+        margin: 0;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      /* Responsif untuk layar kecil (max-width: 768px) */
+      @media (max-width: 768px) {
+        .title-wrapper {
+          top: 10px; /* Kurangi jarak atas */
+          left: 5%; /* Lebih dekat ke tepi */
+          width: 90%; /* Perbesar lebar */
+          font-size: 0.9rem; /* Perkecil ukuran font */
+          padding: 5px; /* Kurangi padding */
+        }
+
+        .title-wrapper h2 {
+          font-size: 1.2rem; /* Perkecil ukuran teks utama */
+        }
+
+        .title-wrapper h5 {
+          font-size: 0.8rem; /* Perkecil ukuran sub-teks */
+        }
+
+        .row.pt-2 {
+          flex-direction: column; /* Susun ulang elemen secara vertikal */
+        }
+
+        .col-3,
+        .col-9 {
+          flex: 1 0 100%; /* Buat elemen mengambil seluruh lebar */
+          text-align: center; /* Pusatkan elemen */
+        }
+      }
+
+      /* Responsif untuk layar besar (min-width: 1200px) */
+      @media (min-width: 1200px) {
+        .title-wrapper {
+          top: 30px; /* Tambahkan ruang di atas */
+          left: 15%; /* Lebih jauh dari tepi */
+          width: 85%; /* Kurangi lebar */
+          font-size: 1.2rem; /* Perbesar ukuran font */
+        }
+
+        .title-wrapper h2 {
+          font-size: 2rem; /* Ukuran lebih besar untuk desktop */
+        }
+
+        .title-wrapper h5 {
+          font-size: 1.2rem; /* Ukuran lebih besar untuk sub-teks */
+        }
+      }
+      .divider {
+        width: 42%;
+        height: 2px;
+        background-color: white;
+        margin-top: 10px;
+      }
+      .divider1 {
+        width: 66%;
+        height: 2px;
+        background-color: white;
+        margin-top: 10px;
+      }
+      .divider2 {
+        width: 34%;
+        height: 2px;
+        background-color: white;
+        margin-top: 10px;
+      }
+      ul {
+        font-size: 12px;
+      }
+      .row.shift-right {
+        padding-left: 20px;
+      }
+      .p {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row pt-2">
+        <div class="col-3 col-md-3 col-lg-3 pr-4">
+          <img
+            src="../assets/images/admin-ajax (2).png"
+            class="img-fluid"
+            alt="..."
+            width="110"
+          />
+        </div>
+        <div class="col-9 col-md-9 col-lg-9 pl-5">
+          <div class="title-wrapper">
+            <h2 class="pt-2">Protect Your Organization from Cyber Threads</h2>
+            <h5 class="pt-2 pb-2">
+              Download the Ultimate Guide to Regular Cybersecurity Training
+              Session Today!
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-4 text-white shift-right">
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="pt-3">
+            <h6>What’s Inside the White Paper?</h6>
+            <div class="divider"></div>
+            <ul>
+              <li>Proven Best Practices for Cybersecurity Training</li>
+              <li>
+                Strategies Tailored for Leaders in Organizations & Governments
+              </li>
+              <li>
+                Actionable Insights to Secure Your Data and Make Indonesia Safer
+              </li>
+              <li>Exclusive Tips for CEOs, IT Managers, and Decision Makers</li>
+            </ul>
+          </div>
+          <div class="pt-3">
+            <h6>This guide empowers leaders with strategies to:</h6>
+            <div class="divider1"></div>
+            <ul>
+              <li>
+                Safeguard sensitive data from the rising tide of cyber threats.
+              </li>
+              <li>
+                Develop and implement training that cultivates a security-aware
+                culture.
+              </li>
+              <li>
+                Strengthen organizational defense mechanisms to prevent costly
+                breaches.
+              </li>
+            </ul>
+          </div>
+          <div class="pt-3">
+            <h6>This Guide Is Perfect For:</h6>
+            <div class="divider2"></div>
+            <ul>
+              <li>CEOs looking to secure business-critical operations.</li>
+              <li>IT Managers responsible for system integrity.</li>
+              <li>Government Officials aiming to protect national assets.</li>
+              <li>
+                Owners of Companies committed to defending client and
+                organizational data.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-3 col-lg-3">
+          <img
+            src="content.jpeg"
+            alt="Image Description"
+            class=""
+            height="460"
+          />
+        </div>
+        <div class="col-12 col-md-5 col-lg-5">
+          <div>
+            <p class="p">
+              Join the organizations taking proactivesteps to protect their
+              future.
+              <br />
+              <br />
+              <b>Trusted by Organizations Nationwide</b>
+              Brought to you <br />by PT SYDECO—Indonesia’s leader in
+              cybersecurity solutions.
+            </p>
+          </div>
+          <div class="d-flex justify-content-end">
+            <h4>Free*</h4>
+          </div>
+          <form id="emailForm">
+            <div class="mb-1">
+              <label for="name" class="form-label">Your Name*</label>
+              <input
+                type="text"
+                class="form-control form-control-sm"
+                id="name"
+                required
+              />
+            </div>
+            <div class="mb-1">
+              <label for="email" class="form-label">Your E-mail Address*</label>
+              <input
+                type="email"
+                class="form-control form-control-sm"
+                id="email"
+                required
+              />
+            </div>
+            <div class="mb-1">
+              <label for="language" class="form-label">Language*</label>
+              <select
+                id="language"
+                class="form-select form-select-sm"
+                aria-label=".form-select-sm example"
+              >
+                <option value="" disabled selected>Select</option>
+                <option value="English">English</option>
+                <option value="Indonesia">Indonesia</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message*</label>
+              <textarea
+                class="form-control"
+                placeholder="Leave a comment here"
+                id="message"
+              ></textarea>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary btn-sm text-center">
+                <i class="fa-solid fa-lock"></i>
+                Send Your Message Now
+            </button> -->
+            <a
+              href="#"
+              id="mailtoLink"
+              class="btn btn-primary btn-sm text-center"
+            >
+              <i class="fa-solid fa-lock"></i>
+              Send Your Message Now
+            </a>
+          </form>
+          <div>
+            <p class="p">
+              Limited-time download – Access invaluable insights today! Expired
+              on 28 February 2025
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("mailtoLink")
+        .addEventListener("click", function (event) {
+          // Ambil nilai dari input formulir
+          const name = encodeURIComponent(
+            document.getElementById("name").value
+          );
+          const email = encodeURIComponent(
+            document.getElementById("email").value
+          );
+          const language = encodeURIComponent(
+            document.getElementById("language").value
+          );
+          const message = encodeURIComponent(
+            document.getElementById("message").value
+          );
+
+          // Susun tautan mailto
+          const mailtoLink = `mailto:widhiantoc@gmail.com?subject=Message%20from%20${message}&textarea=Name:%20${name}%0D%0AEmail:%20${email}%0D%0ALanguage:%20${language}%0D%0AMessage:%20${message}`;
+
+          // Set atribut href ke tautan mailto
+          this.setAttribute("href", mailtoLink);
+
+          // Aplikasi email default akan terbuka secara otomatis
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+  <body></body>
+</html>
